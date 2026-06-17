@@ -12,7 +12,7 @@
   <meta name="theme-color" content="#C75432">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Claras">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 
@@ -21,6 +21,13 @@
 
   <title>Claras</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    /* Evita el "flash" blanco al abrir y empareja el fondo con el tema. */
+    html, body { margin: 0; background-color: #FBF6F1; }
+    @media (prefers-color-scheme: dark) {
+      html, body { background-color: #171210; }
+    }
+  </style>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
