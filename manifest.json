@@ -1,11 +1,11 @@
 {
-    "name": "Claras — reparte gastos",
+    "name": "Claras · reparte gastos",
     "short_name": "Claras",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#FBF6F1",
     "theme_color": "#C75432",
-    "description": "Reparte gastos compartidos en viajes, roomies y planes. Local, en pesos y sin cuentas.",
+    "description": "Reparte gastos compartidos en viajes, roomies y planes. En pesos, sin registro y con tus grupos en tu celular.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
