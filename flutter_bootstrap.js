@@ -33,10 +33,19 @@ addEventListener("message", eventListener);
 if (!window._flutter) {
   window._flutter = {};
 }
-_flutter.buildConfig = {"engineRevision":"77e2e94772b6eb43759e34ed1ad7da4674e19cab","builds":[{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"},{}]};
+_flutter.buildConfig = {"engineRevision":"77e2e94772b6eb43759e34ed1ad7da4674e19cab","builds":[{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"},{}],"useLocalCanvasKit":true};
 
+
+// The PWA asks Google's servers for nothing: CanvasKit ships in the build
+// (`flutter build web --no-web-resources-cdn`) and the fallback fonts (emoji,
+// other scripts, Roboto) are copied to fonts/fallback/ by
+// tool/fuentes_web.py on every deploy. Without these two, every visit sends
+// the visitor's IP to www.gstatic.com and fonts.gstatic.com.
 _flutter.loader.load({
   serviceWorkerSettings: {
-    serviceWorkerVersion: "2076937394" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */
-  }
+    serviceWorkerVersion: "2954334974" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
+  },
+  config: {
+    fontFallbackBaseUrl: "fonts/fallback/",
+  },
 });
