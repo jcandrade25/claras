@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#FBF6F1",
     "theme_color": "#C75432",
-    "description": "Reparte gastos compartidos en viajes, roomies y planes. En pesos, sin registro y con tus grupos en tu celular.",
+    "description": "Reparte gastos compartidos en viajes, roomies y planes. En tu moneda, sin registro y con tus grupos en tu celular.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
