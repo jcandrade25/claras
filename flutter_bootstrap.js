@@ -41,9 +41,19 @@ _flutter.buildConfig = {"engineRevision":"77e2e94772b6eb43759e34ed1ad7da4674e19c
 // other scripts, Roboto) are copied to fonts/fallback/ by
 // tool/fuentes_web.py on every deploy. Without these two, every visit sends
 // the visitor's IP to www.gstatic.com and fonts.gstatic.com.
+//
+// The #carga splash (index.html) goes away on Flutter's first frame.
+//
+// No `hostElement` here: the app stays in full-page mode on purpose. Embedded
+// mode reports no on-screen keyboard inset, so the expense editor's save bar
+// would stop riding above the keyboard on every phone browser.
+window.addEventListener("flutter-first-frame", () => {
+  document.getElementById("carga")?.remove();
+});
+
 _flutter.loader.load({
   serviceWorkerSettings: {
-    serviceWorkerVersion: "3838936191" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
+    serviceWorkerVersion: "909061607" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
   },
   config: {
     fontFallbackBaseUrl: "fonts/fallback/",
