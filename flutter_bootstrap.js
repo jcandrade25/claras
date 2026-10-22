@@ -53,7 +53,7 @@ window.addEventListener("flutter-first-frame", () => {
 
 _flutter.loader.load({
   serviceWorkerSettings: {
-    serviceWorkerVersion: "2920959623" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
+    serviceWorkerVersion: "3809330796" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
   },
   config: {
     fontFallbackBaseUrl: "fonts/fallback/",
